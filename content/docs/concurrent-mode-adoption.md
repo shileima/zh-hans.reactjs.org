@@ -102,7 +102,7 @@ ReactDOM.unstable_createRoot(
 
 我们认为提供[渐进的迁移策略](/docs/faq-versioning.html#commitment-to-stability)比进行破坏性的更改或者使 React 停滞不前是更好的选择。
 
-实际上，我们希望今天使用 legacy 模式的大多数 app 至少能迁移到 blocking 模式（如果不能迁移到 concurrent 模式）。对于希望在短期内支持所有模式的库而言，碎片化可能是很讨厌的事情。但是组件将生态系统从 legacy 模式中移除，也会*解决*一些影响 React 主要库的问题。比如[获取布局时令人迷惑的 Suspense 行为](https://github.com/facebook/react/issues/14536)和[缺乏一致性的批处理](https://github.com/facebook/react/issues/15080)。legacy 模式下，如果不修改语义就无法修复的许多错误，在 blocking 模式和 concurrent 模式下就不存。
+实际上，我们希望今天使用 legacy 模式的大多数 app 至少能迁移到 blocking 模式（如果不能迁移到 concurrent 模式）。对于希望在短期内支持所有模式的库而言，碎片化可能是很讨厌的事情。但是组件将生态系统从 legacy 模式中移除，也会*解决*一些影响 React 主要库的问题。比如[获取布局时令人迷惑的 Suspense 行为](https://github.com/facebook/react/issues/14536)和[缺乏一致性的批处理](https://github.com/facebook/react/issues/15080)。legacy 模式下，如果不修改语义就无法修复的许多错误，在 blocking 模式和 concurrent 模式下就不存在。
 
 你可以把 blocking 模式当作 concurrent 模式的“优雅降级”版本。**所以长远来看，模式的数量会收敛，不用考虑不同的模式。**但就目前而言，模式是一项重要的迁移策略。能让每个人都能决定自己什么时候迁移，并按照自己的速度进行迁移。
 
